@@ -1,0 +1,86 @@
+@import '../../styles/reusable.scss';
+
+.inner-page {
+    display: flex;
+    height: 100%;
+    @include mobile {
+        display: block;
+    }
+    .image-block {
+        width: 34%;
+        @include mobile {
+            width: auto;
+        }
+        img {
+            width:100%;
+        }
+        .fav-icon {
+            display: block;
+            cursor: pointer;
+            float: right;
+            height: 25px;
+            width: 25px;
+            background: url('../../assets/heart.svg');
+            background-size: 100%;
+            &.true {
+                background: url('../../assets/heart-full.svg');
+            }
+        }
+    }
+    
+    .description-block {
+        width: 60%;
+        @include mobile {
+            width: auto;
+        }
+        .top-part {
+            h2 {
+                margin-top: 0;
+                color: black;
+                font-size: 28px;
+            }
+            .price {
+                font-size: 24px;
+            }
+            .measurements {
+                margin-top: 0;
+                &.no-margin {
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .action-buttons {
+                display: flex;
+                width: 100%;
+                width: calc(100% + 40px);
+                margin: -20px;
+                margin-top: 20px;
+                button {
+                    width: 50%;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    background: none;
+                    border: none;
+                    margin: none;
+                    height: 50px;
+                    color: #ADA056;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top:1px solid #F6F6F6;
+                    &.right-border {
+                        border-right: 1px solid #F6F6F6;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .bottom-part {
+            margin-top: 25px;
+        }
+    }
+}

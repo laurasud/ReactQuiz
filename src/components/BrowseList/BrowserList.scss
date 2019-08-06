@@ -1,0 +1,71 @@
+
+.item-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    width: 330px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background: #ffffff;
+    border: 1px solid #FBFBFB;
+    &:hover {
+        img {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .buttom-part {
+        display: flex;
+        align-items: center;
+        height: 25px;
+        padding: 0 10px;
+        min-height: 50px;
+        justify-content: space-between;
+        text-decoration: none;
+        .price {
+            font-size: 20px;
+            color: #414141;
+        }
+        .fav-icon {
+            display: block;
+            height: 25px;
+            width: 25px;
+            background: url('../../assets/heart.svg');
+            background-size: 100%;
+            cursor: pointer;
+            &.true, &.selected {
+                background: url('../../assets/heart-full.svg');
+            }
+        }
+    }
+}
+
+.section-bottom {
+    width: 100%;
+    text-align: center;
+    .load-more-button {
+        border: 2px solid #ADA056;
+        color: #ADA056;
+        padding: 10px;
+        text-transform: uppercase;
+        background: transparent;
+        height: 50px;
+        min-width: 170px;
+        border-radius: 50px;
+        margin: 40px auto 0;
+        outline: none;
+        &:hover {
+            cursor: pointer;
+            outline: none;
+            background: #ADA056;
+            color: white;
+        }
+    }
+}
